@@ -8,12 +8,15 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2')
-  api.use(["templating", "mquandalle:jade@0.4.3", "less"], "client");
+  api.use(["templating", "mquandalle:jade", "less"], "client");
   api.use('iron:router')
+  api.use('raix:handlebar-helpers@0.2.4')
   api.addFiles('chat-bubble.js')
   api.addFiles('collections.js')
   api.addFiles('ChatBubble.js')
-  api.addFiles(['view/chatBubble.jade', 'view/chatBubble.less', 'view/chatBubble.html'], 'client')
+  api.addFiles('router.js')
+  api.addFiles(['view/chatBubble.jade', 'view/chatBubble.less', 'view/chatBubble.js'], 'client')
+  api.addFiles(['view/chatBubbles.jade', 'view/chatBubbles.less', 'view/chatBubbles.js'], 'client')
 })
 
 Package.onTest(function(api) {
