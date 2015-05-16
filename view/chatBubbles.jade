@@ -1,6 +1,7 @@
 template(name="chatBubbles")
 	.chatBubbles
-		if admin
-			p I'm admin
-		else
-			p normal user
+		each chatBubbles
+			.chatBubble(data-chat-id="{{_id}}")
+				each messages
+					p {{authorId}}
+					p {{msg}}
