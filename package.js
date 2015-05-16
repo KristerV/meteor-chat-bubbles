@@ -13,7 +13,7 @@ Package.onUse(function(api) {
   api.use('raix:handlebar-helpers@0.2.4')
   api.addFiles('chat-bubble.js')
   api.addFiles('collections.js')
-  api.addFiles('ChatBubble.js')
+  api.addFiles('ChatBubbleConfig.js')
   api.addFiles('router.js')
   api.addFiles(['view/chatBubble.jade', 'view/chatBubble.less', 'view/chatBubble.js'], 'client')
   api.addFiles(['view/chatBubbles.jade', 'view/chatBubbles.less', 'view/chatBubbles.js'], 'client')
