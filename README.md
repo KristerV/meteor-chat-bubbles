@@ -1,3 +1,4 @@
+```
 uses
 	mquandalle:jade
 	iron:router
@@ -23,3 +24,12 @@ TODO nice to have
 		how many reply
 		how many give email
 	yogiben:admin
+
+TODO config options
+	image
+	name
+	days to delete
+	LESS
+
+
+```
