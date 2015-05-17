@@ -15,6 +15,9 @@ Template.chatBubbles.helpers({
 	},
 	authorAdmin: function() {
 		return this.role == 'admin'
+	},
+	showInput: function(){
+		return Roles.userIsInRole(Meteor.userId(), 'admin') || this.messages.length > 0
 	}
 })
 

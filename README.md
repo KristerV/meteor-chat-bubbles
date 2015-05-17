@@ -6,13 +6,20 @@ uses
 
 setup
 	add user to admin
-	+chatBubbles
+	+chatBubbles for the user
 	admin goes to /chatBubbles
 
 TODO
-	admin info
-		first started chatting
-		last message time
-		status (last online)
-		delete old
-		only admin on chatBubbles route
+	face image and name
+	timestampts for msgs
+	status
+	delete((old || empty) && offline)
+	archive(old && !empty && offline) (new insert allowed)
+	only admin on chatBubbles route
+
+TODO nice to have
+	statistics
+		what starting words have more success
+		how many reply
+		how many give email
+	yogiben:admin
