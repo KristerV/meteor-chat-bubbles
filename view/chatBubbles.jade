@@ -2,8 +2,9 @@ template(name="chatBubbles")
 	.chatBubbles(class="{{#if userIsAdmin}}chatBubblesAdmin{{/if}}")
 		each chatBubbles
 			.chatBubbles-bubble(data-chat-id="{{_id}}")
-				each messages
-					.chatBubbles-msg-container(class="{{#if authorAdmin}}adminMsg{{else}}guestMsg{{/if}}")
-						p.chatBubbles-msg {{msg}}
+				.chatBubbles-msgs-container
+					each messages
+						.chatBubbles-msg-container(class="{{#if authorAdmin}}adminMsg{{else}}guestMsg{{/if}}")
+							p.chatBubbles-msg {{msg}}
 				form(name="chatBubblesNewMessage")
 					input(name="msg" placeholder="write here..")
