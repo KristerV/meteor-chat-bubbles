@@ -1,3 +1,4 @@
+## Warning: this repo is not yet usable in your project so stay clear.
 ```
 uses
 	mquandalle:jade
