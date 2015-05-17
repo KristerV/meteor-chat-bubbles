@@ -4,4 +4,4 @@ template(name="chatBubbles")
 			.chatBubbles-bubble(data-chat-id="{{_id}}")
 				each messages
 					.chatBubbles-msg-container(class="{{#if authorAdmin}}adminMsg{{else}}guestMsg{{/if}}")
-						p.chatBubbles-msg {{authorId}}: {{msg}} <br />
+						p.chatBubbles-msg {{msg}}

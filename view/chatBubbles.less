@@ -1,8 +1,6 @@
 .chatBubbles {
-	text-align: right;
-	position: fixed;
-	right: 0;
-	bottom: 0;
+
+	// Admin view
 	&.chatBubblesAdmin {
 		position: static;
 		text-align: left;
@@ -11,19 +9,31 @@
 			padding: 1em;
 		}
 	}
+
+	// Global view
+	text-align: right;
+	position: fixed;
+	right: 0;
+	bottom: 0;
 	.chatBubbles-bubble {
 		display: inline-block;
 		width: 250px;
+		max-height: 200px;
+		overflow-y: auto;
+		padding: 0 15px 0 15px;
 		.chatBubbles-msg-container {
 			display: block;
 			padding-bottom: 3px;
+
+			// General message style
 			.chatBubbles-msg {
 				display: inline-block;
 				border-radius: 3px;
 				padding: 3px;
 				margin: 0;
 
-				// Arrow
+				////////////////////////////////////////
+				//           Arrow                    //
 				position: relative;
 				&:after, &:before {
 					top: 50%;
@@ -44,12 +54,17 @@
 					border-width: 8px;
 					margin-top: -8px;
 				}
+				//           End Arrow                //
+				////////////////////////////////////////
 			}
+
+			// Admin message style
 			&.adminMsg {
 				text-align: right;
 				color: black;
 
-				// Arrow
+				////////////////////////////////////////
+				//           Arrow                    //
 				.chatBubbles-msg {
 					position: relative;
 					background: #D8E8FE;
@@ -71,12 +86,18 @@
 						margin-top: -8px;
 					}
 				}
+				//           End Arrow                //
+				////////////////////////////////////////
 			}
+
+			// Guest message style
 			&.guestMsg {
 				text-align: left;
 				color: rgba(0,0,0,0.8);
 
-				// Arrow
+				
+				////////////////////////////////////////
+				//           Arrow                    //
 				.chatBubbles-msg {
 					background: #F8F8F8;
 					border: 1px solid #e5e5e5;
@@ -97,6 +118,8 @@
 						margin-top: -8px;
 					}
 				}
+				//           End Arrow                //
+				////////////////////////////////////////
 			}
 		}
 	}
