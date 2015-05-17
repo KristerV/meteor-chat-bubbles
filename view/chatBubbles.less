@@ -18,10 +18,10 @@
 	.chatBubbles-bubble {
 		display: inline-block;
 		width: 250px;
-		max-height: 200px;
-		overflow-y: auto;
-		padding: 0 15px 0 15px;
 		.chatBubbles-msg-container {
+			max-height: 100px;
+			overflow-y: auto;
+			padding: 0 15px 0 15px;
 			display: block;
 			padding-bottom: 3px;
 
@@ -120,6 +120,12 @@
 				}
 				//           End Arrow                //
 				////////////////////////////////////////
+			}
+		}
+		form {
+			text-align: center;
+			input[name="msg"] {
+				width: 95%;
 			}
 		}
 	}
