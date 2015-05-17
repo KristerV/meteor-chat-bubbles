@@ -3,7 +3,7 @@ Template.chatBubbles.helpers({
 		return Roles.userIsInRole(Meteor.userId(), 'admin')
 	},
 	chatBubbles: function() {
-		var find = ChatBubblesCollection.find()
+		var find = ChatBubblesCollection.find({}, {sort: {createdAt: -1}})
 		find.observeChanges({
 			changed: function (id, fields) {
 				Meteor.setTimeout(function(){
@@ -30,6 +30,7 @@ Template.chatBubbles.events({
 			msg: msg,
 			authorId: Meteor.userId(),
 			role: Roles.userIsInRole(Meteor.userId(), 'admin') ? 'admin' : 'guest',
+			createdAt: new Date(),
 		}
 		ChatBubblesCollection.update(chatId, {$push: {messages: data}}, function(){
 			chat.find('.chatBubbles-msgs-container').scrollTop(9999)

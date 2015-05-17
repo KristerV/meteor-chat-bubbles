@@ -6,7 +6,13 @@ Router.configure({
 	},
 	onAfterAction: function () {
 		var admin = Roles.userIsInRole(Meteor.userId(), 'admin')
-		if (!admin)
-			ChatBubblesCollection.insert({authorId: Meteor.userId(), messages: []});
+		var guest = Meteor.user().profile.guest
+		if (!admin && guest) {
+			ChatBubblesCollection.insert({
+				authorId: Meteor.userId(), 
+				messages: [], 
+				createdAt: new Date()
+			})
+		}
 	},
 })
