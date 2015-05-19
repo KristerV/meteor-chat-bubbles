@@ -5,7 +5,7 @@ template(name="chatBubbles")
 				.chatBubbles-msgs-container
 					each messages
 						.chatBubbles-msg-container(class="{{#if authorAdmin}}adminMsg{{else}}guestMsg{{/if}}")
-							p.chatBubbles-msg {{msg}}
+							p.chatBubbles-msg {{msg}} <br><sub class="grey admin-only">{{timestamp}}</sub>
 				form(name="chatBubblesNewMessage")
 					if showInput
 						input(name="msg" placeholder="write here..")

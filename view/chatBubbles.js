@@ -18,6 +18,9 @@ Template.chatBubbles.helpers({
 	},
 	showInput: function(){
 		return Roles.userIsInRole(Meteor.userId(), 'admin') || this.messages.length > 0
+	},
+	timestamp: function(){
+		return moment(this.createdAt).calendar()
 	}
 })
 

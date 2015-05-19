@@ -1,7 +1,16 @@
 .chatBubbles {
+	.grey {
+		color: rgba(0,0,0,0.5);
+	}
+	.admin-only {
+		display: none;
+	}
 
 	// Admin view
 	&.chatBubblesAdmin {
+		.admin-only {
+			display: block;
+		}
 		position: static;
 		text-align: left;
 		.chatBubbles-bubble {

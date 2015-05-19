@@ -13,11 +13,11 @@ setup
 
 TODO
 	face image and name
-	timestampts for msgs
-	status
+	timestampts for msgs (admin only)
+	user status
 	delete((old || empty) && offline)
 	archive(old && !empty && offline) (new insert allowed)
-	only admin on chatBubbles route
+	signed in users only see chats at correct route
 
 TODO nice to have
 	statistics
@@ -30,7 +30,7 @@ TODO config options
 	image
 	name
 	days to delete
-	LESS
+	LESS customisations (use :not(.unstyled))
 
 
 ```
