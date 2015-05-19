@@ -2,11 +2,19 @@ Template.chatBubbles.helpers({
 	userIsAdmin: function(){
 		return Roles.userIsInRole(Meteor.userId(), 'admin')
 	},
+	userIsGuest: function(){
+		var user = Meteor.user()
+		if (!user)
+			return false
+		return user.profile.guest
+	},
 	chatBubbles: function() {
 		var find = ChatBubblesCollection.find({}, {sort: {createdAt: -1}})
 		find.observeChanges({
 			changed: function (id, fields) {
-				Meteor.setTimeout(function(){
+				setTimeout(function(){
+					// if ($('.chatBubbles').children().length > 0)
+						// $('.chatBubbles').removeClass('underScreen')
 					$('.chatBubbles-bubble[data-chat-id="'+id+'"] .chatBubbles-msgs-container').scrollTop(9999)
 				}, 10)
 			},
@@ -16,7 +24,7 @@ Template.chatBubbles.helpers({
 	authorAdmin: function() {
 		return this.role == 'admin'
 	},
-	showInput: function(){
+	showBubble: function(){
 		return Roles.userIsInRole(Meteor.userId(), 'admin') || this.messages.length > 0
 	},
 	timestamp: function(){
@@ -36,6 +44,13 @@ Template.chatBubbles.helpers({
 			return "online"
 		else
 			return "offline"
+	},
+	underScreen: function() {
+		var notAdmin = !Roles.userIsInRole(Meteor.userId(), 'admin')
+		var noChatExists = !ChatBubblesCollection.findOne({
+			archived: {$in: [null, false]}, // is not archived
+			'messages.0': {$exists: true}}) // At least one message exists
+		return notAdmin && noChatExists
 	}
 })
 

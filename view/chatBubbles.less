@@ -41,6 +41,13 @@
 	position: fixed;
 	right: 0;
 	bottom: 0;
+	-webkit-transition: bottom 500ms ease-out;
+	-moz-transition: bottom 500ms ease-out;
+	-o-transition: bottom 500ms ease-out;
+	transition: bottom 500ms ease-out;
+	&.underScreen {
+		bottom: -150px;
+	}
 	.chatBubbles-bubble {
 		display: inline-block;
 		width: 250px;

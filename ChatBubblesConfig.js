@@ -1,6 +1,6 @@
 ChatBubblesDefaults = {
 	image: "",
-	hoursOld: 0,
+	hoursOld: 2,
 }
 
 ChatBubblesGet = function(item) {
