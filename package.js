@@ -11,7 +11,10 @@ Package.onUse(function(api) {
   api.use(["templating", "mquandalle:jade@0.4.3", "less"], "client");
   api.use('iron:router')
   api.use('raix:handlebar-helpers@0.2.4')
-  api.use('artwells:accounts-guest')
+  api.use('artwells:accounts-guest@0.1.5')
+  api.use('alanning:roles@1.2.13')
+  api.use('mizzao:user-status@0.6.4')
+  api.use('momentjs:moment@2.10.3')
   api.addFiles('chat-bubble.js')
   api.addFiles('collections.js')
   api.addFiles('ChatBubblesConfig.js')

@@ -5,15 +5,15 @@ uses
 	iron:router
 	raix:handlebar-helpers
 	artwells:accounts-guest
+	mizzao:user-status
 
 setup
 	add user to admin
 	+chatBubbles for the user
 	admin goes to /chatBubbles
+	config options
 
 TODO
-	face image and name
-	user status
 	delete((old || empty) && offline)
 	archive(old && !empty && offline) (new insert allowed)
 	signed in users only see chats at correct route

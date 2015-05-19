@@ -8,6 +8,12 @@ if (Meteor.isServer) {
 		}
 		return ChatBubblesCollection.find(filter)
 	})
+
+	Meteor.publish("users", function(userId) {
+		if (Roles.userIsInRole(userId, 'admin'))
+			return Meteor.users.find({}, {fields: {profile: 1, status: 1, username: 1}})
+	})
+
 	ChatBubblesCollection.allow({
 		insert: function (userId, doc) {
 			// Allow one chat per guest
@@ -27,3 +33,4 @@ if (Meteor.isServer) {
 		},
 	});
 }
+

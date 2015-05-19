@@ -44,6 +44,21 @@
 	.chatBubbles-bubble {
 		display: inline-block;
 		width: 250px;
+		&.status-online {
+			// background-color: rgba(0,255,0,0.4);
+			-webkit-box-shadow:inset 0 0 50px 0 #00FF00;
+			box-shadow:inset 0 0 50px 0 #00FF00;
+		}
+		&.status-offline {
+			// background-color: rgba(0,255,0,0.4);
+			-webkit-box-shadow:inset 0 0 50px 0 rgba(0,0,0,0.3);
+			box-shadow:inset 0 0 50px 0 rgba(0,0,0,0.3);
+		}
+		&.status-idle {
+			// background-color: rgba(0,255,0,0.4);
+			-webkit-box-shadow:inset 0 0 50px 0 #FFF900;
+			box-shadow:inset 0 0 50px 0 #FFF900;
+		}
 		.chatBubbles-msgs-container {
 			max-height: 250px;
 			overflow-y: auto;

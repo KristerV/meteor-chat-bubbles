@@ -25,6 +25,18 @@ Template.chatBubbles.helpers({
 	profileImageSource: function() {
 		return ChatBubblesConfig.image
 	},
+	status: function() {
+		var user = Meteor.users.findOne(this.authorId)
+		if (!user || !user.status)
+			return false
+
+		if (user.status.idle)
+			return "idle"
+		else if (user.status.online)
+			return "online"
+		else
+			return "offline"
+	}
 })
 
 Template.chatBubbles.events({
@@ -47,3 +59,14 @@ Template.chatBubbles.events({
 
 	}
 });
+
+
+Template.chatBubbles.rendered = function () {
+	// Start idle monitor 
+	// https://github.com/mizzao/meteor-user-status/
+	Deps.autorun(function(c){
+		try {
+			UserStatus.startMonitor({threshold: 30000,interval:5000,idleOnBlur:true});
+		} catch(err) {}
+	})
+};

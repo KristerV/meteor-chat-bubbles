@@ -1,7 +1,7 @@
 template(name="chatBubbles")
 	.chatBubbles(class="{{#if userIsAdmin}}chatBubblesAdmin{{/if}}")
 		each chatBubbles
-			.chatBubbles-bubble(data-chat-id="{{_id}}")
+			.chatBubbles-bubble(data-chat-id="{{_id}}" class="status-{{status}}")
 				.chatBubbles-msgs-container
 					each messages
 						.chatBubbles-msg-container(class="{{#if authorAdmin}}adminMsg{{else}}guestMsg{{/if}}")
