@@ -13,6 +13,7 @@ if (Meteor.isServer) {
 	Meteor.publish("users", function(userId) {
 		if (Roles.userIsInRole(userId, 'admin'))
 			return Meteor.users.find({}, {fields: {profile: 1, status: 1, username: 1}})
+		return Meteor.users.find(userId)
 	})
 
 	ChatBubblesCollection.allow({

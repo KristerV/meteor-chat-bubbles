@@ -1,5 +1,6 @@
-Router.route('/chatBubbles')
-
+Router.route('/chatBubbles', function(){
+	this.render('chatBubbles')
+})
 Router.configure({
 	waitOn: function() {
 		return [

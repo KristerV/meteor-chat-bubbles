@@ -9,7 +9,7 @@ uses
 
 setup
 	add user to admin
-	+chatBubbles for the user
+	+chatBubbles or render(chatBubbles)
 	admin goes to /chatBubbles
 	config options
 
@@ -18,7 +18,7 @@ info
 	using cleanup means you delete(empty && offline) and archive(old && offline). There is currently no way to see the archived chats, but straight from the database. Also, archived chats are not reinstated when the same user returns, because perhaps it's a new user and private information can't be shown.
 
 TODO
-	signed in users only see chats at correct route
+	notification
 
 TODO nice to have
 	statistics
