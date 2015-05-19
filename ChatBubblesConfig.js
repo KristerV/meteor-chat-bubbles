@@ -1,0 +1,3 @@
+ChatBubblesConfig = {
+	image: "/krister.jpg",
+}

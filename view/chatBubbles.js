@@ -21,7 +21,10 @@ Template.chatBubbles.helpers({
 	},
 	timestamp: function(){
 		return moment(this.createdAt).calendar()
-	}
+	},
+	profileImageSource: function() {
+		return ChatBubblesConfig.image
+	},
 })
 
 Template.chatBubbles.events({

@@ -13,7 +13,6 @@ setup
 
 TODO
 	face image and name
-	timestampts for msgs (admin only)
 	user status
 	delete((old || empty) && offline)
 	archive(old && !empty && offline) (new insert allowed)
