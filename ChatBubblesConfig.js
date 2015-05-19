@@ -1,3 +1,0 @@
-ChatBubblesConfig = {
-	image: "/krister.jpg",
-}
