@@ -18,9 +18,11 @@ Package.onUse(function(api) {
   api.addFiles('chat-bubble.js')
   api.addFiles('collections.js')
   api.addFiles('ChatBubblesConfig.js')
+  api.addFiles('methods.js', 'server')
   api.addFiles('router.js')
   api.addFiles(['view/chatBubbles.jade', 'view/chatBubbles.less', 'view/chatBubbles.js'], 'client')
   api.export('ChatBubblesCollection')
+  api.export('moment')
 })
 
 Package.onTest(function(api) {

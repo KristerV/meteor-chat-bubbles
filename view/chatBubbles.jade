@@ -11,3 +11,5 @@ template(name="chatBubbles")
 						input(name="msg" placeholder="write here..")
 		if profileImageSource
 			.profile-image(style="background-image:url('{{profileImageSource}}')")
+		if userIsAdmin
+			button(name="archive-old") Archive old and delete empty<br>(only affects offline guests)

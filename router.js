@@ -11,6 +11,8 @@ Router.configure({
 		var admin = Roles.userIsInRole(Meteor.userId(), 'admin')
 		if (!Meteor.user())
 			return false
+
+		// Create new chat
 		var guest = Meteor.user().profile.guest
 		if (!admin && guest) {
 			ChatBubblesCollection.insert({

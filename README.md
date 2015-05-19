@@ -13,10 +13,13 @@ setup
 	admin goes to /chatBubbles
 	config options
 
+info
+	Admin acts as a single person. So two admins can pretend to be the support person at the same time.
+	using cleanup means you delete(empty && offline) and archive(old && offline). There is currently no way to see the archived chats, but straight from the database. Also, archived chats are not reinstated when the same user returns, because perhaps it's a new user and private information can't be shown.
+
 TODO
-	delete((old || empty) && offline)
-	archive(old && !empty && offline) (new insert allowed)
 	signed in users only see chats at correct route
+	image is hidden at first and gets animated in with chat.
 
 TODO nice to have
 	statistics

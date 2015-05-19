@@ -6,6 +6,7 @@ if (Meteor.isServer) {
 		if (Roles.userIsInRole(userId, 'admin')) {
 			filter = {}
 		}
+		filter['archived'] = {$in: [null, false]}
 		return ChatBubblesCollection.find(filter)
 	})
 
@@ -17,7 +18,7 @@ if (Meteor.isServer) {
 	ChatBubblesCollection.allow({
 		insert: function (userId, doc) {
 			// Allow one chat per guest
-			return !ChatBubblesCollection.findOne({authorId: userId})
+			return !ChatBubblesCollection.findOne({authorId: userId, archived: {$in: [null, false]}})
 		},
 		update: function (userId, doc, fields, modifier) {
 
@@ -31,6 +32,8 @@ if (Meteor.isServer) {
 
 			return false
 		},
+		remove: function (userId, doc) {
+			return Roles.userIsInRole(userId, 'admin')
+		},
 	});
 }
-

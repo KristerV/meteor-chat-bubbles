@@ -23,7 +23,7 @@ Template.chatBubbles.helpers({
 		return moment(this.createdAt).calendar()
 	},
 	profileImageSource: function() {
-		return ChatBubblesConfig.image
+		return ChatBubblesGet("image")
 	},
 	status: function() {
 		var user = Meteor.users.findOne(this.authorId)
@@ -56,7 +56,9 @@ Template.chatBubbles.events({
 		ChatBubblesCollection.update(chatId, {$push: {messages: data}}, function(){
 			chat.find('.chatBubbles-msgs-container').scrollTop(9999)
 		})
-
+	},
+	'click button[name="archive-old"]': function() {
+		Meteor.call('cleanChats')
 	}
 });
 
