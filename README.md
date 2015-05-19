@@ -19,7 +19,6 @@ info
 
 TODO
 	signed in users only see chats at correct route
-	image is hidden at first and gets animated in with chat.
 
 TODO nice to have
 	statistics
@@ -29,9 +28,6 @@ TODO nice to have
 	yogiben:admin
 
 TODO config options
-	image
-	name
-	days to delete
 	LESS customisations (use :not(.unstyled))
 
 
