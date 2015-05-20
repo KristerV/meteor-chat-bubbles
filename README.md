@@ -40,6 +40,8 @@ Using
 3. Make the user admin with Roles.addUsersToRoles(userId, ['admin']) (from package `alanning:roles`)
 4. Custom config
 
+The admin view is shared by all admins and the client you're speaking to can't differenciate between many. This is by design to keep the customer experience simple. Keep this in mind so you don't have more than one person talking at any one time.
+
 Custom config
 -------------
 
@@ -51,14 +53,20 @@ Here are all the non-CSS customization options
     	appName: ""
     }
 
-- *image*: the image that you want to display next to the client chat. At the moment only one is supported.
-- *hoursOld*: When pressing the "Archive old" button, how many hours is old?
-- *appName*: Displayed on top of the notifications.
+- **image**: the image that you want to display next to the client chat. At the moment only one is supported.
+- **hoursOld**: When pressing the "Archive old" button, how many hours is old?
+- **appName**: Displayed on top of the notifications.
 
 Styling
 -------
 
-To style elements just override the CSS. To remove all styling from the chat use {{> chatBubbles style="unstyled"}} or this.render('chatBubbles', {data: {style: "unstyled"}});
+To style elements just override the CSS. To remove all styling from the chat use 
+
+    {{> chatBubbles style="unstyled"}} 
+
+or 
+
+    this.render('chatBubbles', {data: {style: "unstyled"}});
 
 Packages in use
 ---------------
