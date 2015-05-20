@@ -1,3 +1,5 @@
+[DEMO](http://chat-bubbles.meteor.com)
+
 ChatBubbles is a [Meteor.js](http://meteor.com) chat app that enables you to talk to your potential customers. Basically you can have a **chat bubble for the guests** on the front page:
 
 ![client chat](/readme/client.gif)
