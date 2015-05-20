@@ -16,21 +16,17 @@ setup
 info
 	Admin acts as a single person. So two admins can pretend to be the support person at the same time.
 	using cleanup means you delete(empty && offline) and archive(old && offline). There is currently no way to see the archived chats, but straight from the database. Also, archived chats are not reinstated when the same user returns, because perhaps it's a new user and private information can't be shown.
-	To add styling yourself use {{> chatBubbles style="unstyled"}} or this.render('chatBubbles', {data: {style: "unstyled"}});
-
-TODO
-	tests
-
-TODO nice to have
-	statistics
-		what starting words have more success
-		how many reply
-		how many give email
-	yogiben:admin
-
-TODO config options
-	LESS customisations (use :not(.unstyled))
-	{{> chatBubbles style="unstyled"}}
-
 
 ```
+
+Styling
+-------
+
+To style elements just override the CSS. To remove all styling from the chat use {{> chatBubbles style="unstyled"}} or this.render('chatBubbles', {data: {style: "unstyled"}});
+
+ToDo
+----
+
+Tests
+Statistics (what starting words have more success, how many guests want to chat, how many give their email)
+yogiben:admin integration
