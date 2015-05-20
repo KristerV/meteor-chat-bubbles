@@ -27,6 +27,6 @@ To style elements just override the CSS. To remove all styling from the chat use
 ToDo
 ----
 
-Tests
-Statistics (what starting words have more success, how many guests want to chat, how many give their email)
-yogiben:admin integration
+- Tests
+- Statistics (what starting words have more success, how many guests want to chat, how many give their email)
+- yogiben:admin integration
