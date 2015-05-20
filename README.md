@@ -2,11 +2,11 @@
 
 ChatBubbles is a [Meteor.js](http://meteor.com) chat app that enables you to talk to your potential customers. Basically you can have a **chat bubble for the guests** on the front page:
 
-![client chat](https://github.com/KristerV/meteor-chat-bubbles/blob/master/readme/client.gif)
+![client chat](https://raw.githubusercontent.com/KristerV/meteor-chat-bubbles/master/readme/client.gif)
 
 and an **admin view** with client status shown and notifications.
 
-![Admin view](https://github.com/KristerV/meteor-chat-bubbles/blob/master/readme/admin.png)
+![Admin view](https://raw.githubusercontent.com/KristerV/meteor-chat-bubbles/master/readme/admin.png)
 
 ## Installing
 
@@ -27,7 +27,7 @@ The admin view is shared by all admins and the client you're speaking to can't d
 
 There is a button in the admin view at the bottom of the page that cleans up old chats.
 
-![archive](https://github.com/KristerV/meteor-chat-bubbles/blob/master/readme/archive.png)
+![archive](https://raw.githubusercontent.com/KristerV/meteor-chat-bubbles/master/readme/archive.png)
 
 What this button does:
 
