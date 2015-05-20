@@ -1,6 +1,6 @@
 Package.describe({
   name: 'kristerv:chat-bubbles',
-  version: '0.4.0',
+  version: '0.4.1',
   summary: 'Chat with your potential customer',
   git: 'https://github.com/KristerV/meteor-chat-bubbles',
   documentation: 'README.md'
