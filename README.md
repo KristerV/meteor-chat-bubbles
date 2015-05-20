@@ -12,10 +12,10 @@ and a chat admin view with client status shown and notifications.
 
 ## Using
 
-1. For the client either use {{> chatBubbles}} or this.render('chatBubbles')
+1. For the client either use `{{> chatBubbles}}` or `this.render('chatBubbles')` anywhere.
 2. The admin view is at route `/chatBubbles`.
-3. Make the user admin with `Roles.addUsersToRoles(userId, ['admin'])`
-4. [Custom config](#custom-config)
+3. Give a user admin rights with `Roles.addUsersToRoles(userId, ['admin'])`
+4. Add [custom configurations](#custom-config)
 
 ### Admin view
 
