@@ -27,10 +27,48 @@ and a chat admin view with client status shown and notifications.
 
 ![Admin view](/readme/admin.png)
 
+Installing
+----------
+
+    meteor add kristerv:chat-bubbles
+
+Using
+-----
+
+1. For the client either use {{> chatBubbles}} or this.render('chatBubbles')
+2. The admin view is at route `/chatBubbles`.
+3. Make the user admin with Roles.addUsersToRoles(userId, ['admin']) (from package `alanning:roles`)
+4. Custom config
+
+Custom config
+-------------
+
+Here are all the non-CSS customization options
+
+    ChatBubblesDefaults = {
+    	image: "",
+    	hoursOld: 2,
+    	appName: ""
+    }
+
+- *image*: the image that you want to display next to the client chat. At the moment only one is supported.
+- *hoursOld*: When pressing the "Archive old" button, how many hours is old?
+- *appName*: Displayed on top of the notifications.
+
 Styling
 -------
 
 To style elements just override the CSS. To remove all styling from the chat use {{> chatBubbles style="unstyled"}} or this.render('chatBubbles', {data: {style: "unstyled"}});
+
+Packages in use
+---------------
+
+- mquandalle:jade
+- iron:router
+- artwells:accounts-guest
+- alanning:roles
+- mizzao:user-status
+- momentjs:moment
 
 ToDo
 ----

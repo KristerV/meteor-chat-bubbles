@@ -10,7 +10,6 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2')
   api.use(["templating", "mquandalle:jade@0.4.3", "less"], "client");
   api.use('iron:router')
-  api.use('raix:handlebar-helpers@0.2.4')
   api.use('artwells:accounts-guest@0.1.5')
   api.use('alanning:roles@1.2.13')
   api.use('mizzao:user-status@0.6.4')
