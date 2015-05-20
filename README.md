@@ -65,15 +65,6 @@ or
 
     this.render('chatBubbles', {data: {style: "unstyled"}});
 
-## Packages in use
-
-- mquandalle:jade
-- iron:router
-- artwells:accounts-guest
-- alanning:roles
-- mizzao:user-status
-- momentjs:moment
-
 ## ToDo
 
 - Tests
