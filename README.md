@@ -53,13 +53,9 @@ Here are all the non-CSS customization options
 
 ## Styling
 
-### Modify some styling
+To **modify elements** just override the CSS. 
 
-To style elements just override the CSS. 
-
-### Complete redesign
-
-To remove all styling from the chat use 
+To **remove all styling** from the chat use 
 
     {{> chatBubbles style="unstyled"}} 
 
