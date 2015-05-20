@@ -1,8 +1,8 @@
-ChatBubbles is a [Meteor.js](http://meteor.com) chat app that enables you to talk to your potential customers. Basically you can have a **chat bubble for the guests on the front page**:
+ChatBubbles is a [Meteor.js](http://meteor.com) chat app that enables you to talk to your potential customers. Basically you can have a **chat bubble for the guests** on the front page:
 
 ![client chat](/readme/client.gif)
 
-and a chat admin view with client status shown and notifications.
+and an **admin view** with client status shown and notifications.
 
 ![Admin view](/readme/admin.png)
 
