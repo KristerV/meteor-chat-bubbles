@@ -25,6 +25,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest')
-  api.use('kristerv:chat-bubble')
+  api.use('kristerv:chat-bubbles')
   api.addFiles('chat-bubble-tests.js')
 })
