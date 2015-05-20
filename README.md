@@ -31,10 +31,11 @@ What this button does:
 
 1. Deletes any completely empty messages  
 2. Archives any old messages.
+3. These actions **affect offline user chats only.**
 
-**This only affects chats with offline users**
+**Archived messages** can't be found anywhere at the moment. If you need to see them, go straight to the databse and search with `db.chatBubbles.find({archieved: true}).pretty()`.
 
-How old is old can be determined with [ChatBubbles.hoursOld](#custom-config)
+**How old is old** be determined with [ChatBubbles.hoursOld](#custom-config)
 
 ## Custom config
 
