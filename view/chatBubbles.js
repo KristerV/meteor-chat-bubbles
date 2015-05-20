@@ -27,6 +27,9 @@ Template.chatBubbles.helpers({
 		})
 		return find
 	},
+	chatBubblesExist: function(){
+		return ChatBubblesCollection.find().fetch()
+	},
 	authorAdmin: function() {
 		return this.role == 'admin'
 	},

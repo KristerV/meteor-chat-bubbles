@@ -1,12 +1,24 @@
-Router.route('/chatBubbles', function(){
-	this.render('chatBubbles')
+Router.route('/chatBubbles', {
+	subscriptions: function() {
+		return [Meteor.subscribe('chatBubbles', Meteor.userId()),
+			Meteor.subscribe('users', Meteor.userId())]
+	},
+	action: function() {
+		if (this.ready()) {
+			this.render('chatBubbles');
+		} else {
+			this.render('Loading');
+		}
+	}
 })
+
 Router.configure({
 	waitOn: function() {
-		return [
-				Meteor.subscribe('chatBubbles', Meteor.userId()),
-				Meteor.subscribe('users', Meteor.userId()),
-			]
+		var user = Meteor.user()
+		if (!user || !user.profile)
+			return false
+		if (user.profile.guest)
+			return Meteor.subscribe('chatBubbles', Meteor.userId())
 	},
 	onAfterAction: function () {
 		var admin = Roles.userIsInRole(Meteor.userId(), 'admin')

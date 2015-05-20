@@ -1,5 +1,5 @@
 template(name="chatBubbles")
-	.chatBubbles(class="{{#if userIsAdmin}}chatBubblesAdmin{{/if}} {{#if underScreen}}underScreen{{/if}}")
+	.chatBubbles(class="{{#if userIsAdmin}}chatBubblesAdmin{{/if}} {{#if underScreen}}underScreen{{/if}} {{style}}")
 		each chatBubbles
 			if showBubble
 				.chatBubbles-bubble(data-chat-id="{{_id}}" class="status-{{status}}")
@@ -13,4 +13,5 @@ template(name="chatBubbles")
 					if userIsGuest
 						.profile-image(style="background-image:url('{{profileImageSource}}')")
 		if userIsAdmin
-			button(name="archive-old") Archive old and delete empty<br>(only affects offline guests)
+			if chatBubblesExist
+				button(name="archive-old") Archive old and delete empty<br>(only affects offline guests)
