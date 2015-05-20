@@ -28,7 +28,8 @@ There is a button in the admin view at the bottom of the page that cleans up old
 ![archive](/readme/archive.png)
 
 What this button does:
-1. Deletes any completely empty messages
+
+1. Deletes any completely empty messages  
 2. Archives any old messages.
 
 **This only affects chats with offline users**
