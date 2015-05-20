@@ -1,23 +1,3 @@
-## Warning: this repo is not yet usable in your project so stay clear.
-```
-uses
-	mquandalle:jade
-	iron:router
-	raix:handlebar-helpers
-	artwells:accounts-guest
-	mizzao:user-status
-
-setup
-	add user to admin
-	+chatBubbles or render(chatBubbles)
-	admin goes to /chatBubbles
-	config options
-
-info
-	using cleanup means you delete(empty && offline) and archive(old && offline). There is currently no way to see the archived chats, but straight from the database. Also, archived chats are not reinstated when the same user returns, because perhaps it's a new user and private information can't be shown.
-
-```
-
 ChatBubbles is a [Meteor.js](http://meteor.com) chat app that enables you to talk to your potential customers. Basically you can have a chat bubble for the guests on the front page:
 
 ![client chat](/readme/client.gif)
@@ -71,7 +51,13 @@ Here are all the non-CSS customization options
 
 ## Styling
 
-To style elements just override the CSS. To remove all styling from the chat use 
+### Modify some styling
+
+To style elements just override the CSS. 
+
+### Complete redesign
+
+To remove all styling from the chat use 
 
     {{> chatBubbles style="unstyled"}} 
 

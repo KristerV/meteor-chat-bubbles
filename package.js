@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'kristerv:chat-bubble',
-  version: '0.0.1',
+  name: 'kristerv:chat-bubbles',
+  version: '0.4.0',
   summary: 'Chat with your potential customer',
-  git: '',
+  git: 'https://github.com/KristerV/meteor-chat-bubbles',
   documentation: 'README.md'
 })
 
@@ -21,7 +21,6 @@ Package.onUse(function(api) {
   api.addFiles('router.js')
   api.addFiles(['view/chatBubbles.jade', 'view/chatBubbles.less', 'view/chatBubbles.js'], 'client')
   api.export('ChatBubblesCollection')
-  api.export('moment')
 })
 
 Package.onTest(function(api) {
