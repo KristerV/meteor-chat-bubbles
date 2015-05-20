@@ -12,11 +12,17 @@ Template.chatBubbles.helpers({
 		var find = ChatBubblesCollection.find({}, {sort: {createdAt: -1}})
 		find.observeChanges({
 			changed: function (id, fields) {
+				ChatBubblesNotify("New message")
 				setTimeout(function(){
-					// if ($('.chatBubbles').children().length > 0)
-						// $('.chatBubbles').removeClass('underScreen')
 					$('.chatBubbles-bubble[data-chat-id="'+id+'"] .chatBubbles-msgs-container').scrollTop(9999)
 				}, 10)
+			},
+		});
+		var aMinuteAgo = moment().subtract(1, 'minutes').toDate()
+		var alertColl = ChatBubblesCollection.find({createdAt: {$gt: aMinuteAgo}})
+		alertColl.observeChanges({
+			added: function (id, fields) {
+				ChatBubblesNotify("New client chat")
 			},
 		})
 		return find

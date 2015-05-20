@@ -10,17 +10,19 @@ Router.configure({
 	},
 	onAfterAction: function () {
 		var admin = Roles.userIsInRole(Meteor.userId(), 'admin')
-		if (!Meteor.user())
+		if (!Meteor.user() || admin)
 			return false
 
 		// Create new chat
-		var guest = Meteor.user().profile.guest
-		if (!admin && guest) {
-			ChatBubblesCollection.insert({
-				authorId: Meteor.userId(), 
-				messages: [], 
-				createdAt: new Date()
-			})
+		if (!ChatBubblesCollection.findOne({authorId: Meteor.userId(), archived: {$in: [null, false]}})) {
+			var guest = Meteor.user().profile.guest
+			if (!admin && guest) {
+				ChatBubblesCollection.insert({
+					authorId: Meteor.userId(), 
+					messages: [], 
+					createdAt: new Date()
+				})
+			}
 		}
 	},
 })
