@@ -15,7 +15,7 @@ and a chat admin view with client status shown and notifications.
 1. For the client either use {{> chatBubbles}} or this.render('chatBubbles')
 2. The admin view is at route `/chatBubbles`.
 3. Make the user admin with Roles.addUsersToRoles(userId, ['admin']) (from package `alanning:roles`)
-4. Custom config
+4. [Custom config](#custom-config)
 
 ### Admin view
 
