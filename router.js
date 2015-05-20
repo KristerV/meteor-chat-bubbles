@@ -27,7 +27,10 @@ Router.configure({
 
 		// Create new chat
 		if (!ChatBubblesCollection.findOne({authorId: Meteor.userId(), archived: {$in: [null, false]}})) {
-			var guest = Meteor.user().profile.guest
+			var user = Meteor.user()
+			if (!user || !user.profile)
+				return false
+			var guest = user.profile.guest
 			if (!admin && guest) {
 				ChatBubblesCollection.insert({
 					authorId: Meteor.userId(), 

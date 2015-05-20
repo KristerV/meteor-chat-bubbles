@@ -4,7 +4,7 @@ Template.chatBubbles.helpers({
 	},
 	userIsGuest: function(){
 		var user = Meteor.user()
-		if (!user)
+		if (!user || !user.profile)
 			return false
 		return user.profile.guest
 	},
